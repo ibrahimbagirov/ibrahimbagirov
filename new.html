@@ -13,7 +13,7 @@
         <div class="conts">
             <h1 class="h1">Kredit Hesablayici</h1>
             <p class="paragraph">Kredit miqdari $</p>
-            <input  type="number" id="num1" placeholder="Enter a number">
+            <input type="number" id="num1" placeholder="Enter a number">
             <p class="paragraph">Faiz %</p>
             <input type="number" id="num2" placeholder="Enter a number">
             <p class="paragraph">Ay</p>
@@ -22,8 +22,15 @@
             <button onclick="hesabla()" class="calc"> Hesabla</button>
         </div>
     </div>
-    
-    <script src="new.js"></script>
+
+    <script src="new.js">function hesabla() {
+            let num1 = Number(document.getElementById('num1').value);
+            let num2 = Number(document.getElementById('num2').value);
+            let num3 = Number(document.getElementById('num3').value); // Corrected input id!
+            let calc = num1 / num3;
+            let netice = calc + (calc * num2 / 100);
+            document.getElementById("netice").innerHTML = "Ayliq Ödeme:" + netice;
+        }</script>
 </body>
 
 </html>
